@@ -623,8 +623,7 @@ Return<int32_t> HWCSession::setPanelLuminanceAttributes(uint32_t disp_id, float 
 }
 
 Return<bool> HWCSession::isBuiltInDisplay(uint32_t disp_id) {
-  if ((HWC_DISPLAY_PRIMARY == disp_id) || (HWC_DISPLAY_BUILTIN_2 == disp_id) ||
-      (HWC_DISPLAY_BUILTIN_3 == disp_id) || (HWC_DISPLAY_BUILTIN_4 == disp_id)) {
+  if (HWC_DISPLAY_PRIMARY == disp_id) {
     return true;
   }
   else {
